@@ -1,4 +1,9 @@
-import * as todoList from "./todoList"
-import { createTodoElements} from ".todoListElements.js"
+/**
+ * The file where everything comes together
+ */
+import * as todoList from "./scripts/todoList.js";
+import { createTodoElement } from "./scripts/createTodoElement.js";
 
-const list = document.querySelector()
+// What elements do we need?
+// What events do we need to listen for?
+// What should happen when those event occur?
