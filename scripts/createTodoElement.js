@@ -25,7 +25,7 @@ export function createTodoElement(data) {
     titleElement.textContent =data.title;
 
     const createAtElement = wrapper.(".created-at");
-    createAtElement = textContent = data.created-at.
+    createAtElement = textContent = data.createdAt;
 
     
     return wrapper;
