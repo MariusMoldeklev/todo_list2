@@ -15,7 +15,23 @@ const todoDisplay = document.querySelector("#todoDisplay");
 
 function updateDisplay() {
     todoDisplay.innerHTML = "";
-    const newTodo = createTodoElement();
+
+   for (const todo of todoes) {
+    
+    const newTodo = createTodoElement(todo);
+    
     todoDisplay.appendChild(newTodo);
 }
-updateDisplay();
+}
+
+addButton.addEventListener("click", () =>{
+    // need to read the user inputText
+    const userInput  = inputText.value;
+    // call our todolist.addtodo
+    const newTodoData =  {
+        title:inputTitle,
+    };
+    todoList.addTodo(newTodoData);
+    // reset user input
+    inputText.value = "";
+})
