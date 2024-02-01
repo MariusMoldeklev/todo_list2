@@ -17,16 +17,15 @@ const template = `
  * @returns {HTMLElement}
  */
 export function createTodoElement(data) {
-
+    
     const wrapper = document.createElement("li");
     wrapper.innerHTML = template;
 
-    const titleElement = wrapper.querySelector(".title")
-    titleElement.textContent =data.title;
+    const titleElement = wrapper.querySelector(".title");
+    titleElement.textContent = data.title;
 
-    const createAtElement = wrapper.(".created-at");
-    createAtElement = textContent = data.createdAt;
+    const createAtElement = wrapper.querySelector(".created-at-value");
+    createAtElement.textContent = data.createdAt;
 
-    
     return wrapper;
 }

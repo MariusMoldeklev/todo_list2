@@ -19,7 +19,7 @@ function updateDisplay() {
    for (const todo of todoes) {
     
     const newTodo = createTodoElement(todo);
-    
+
     todoDisplay.appendChild(newTodo);
 }
 }
@@ -29,7 +29,7 @@ addButton.addEventListener("click", () =>{
     const userInput  = inputText.value;
     // call our todolist.addtodo
     const newTodoData =  {
-        title:inputTitle,
+        title: userInput,
     };
     todoList.addTodo(newTodoData);
     // reset user input
