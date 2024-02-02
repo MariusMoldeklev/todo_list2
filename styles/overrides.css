@@ -9,6 +9,7 @@ body {
   }
 
   todo-item >p:first-child{
+    font-size: 20px;
 
   }
 
@@ -31,7 +32,7 @@ body {
 }
 
 .bg-primary {
-    background-color: #3498db; /* Change this color to your desired primary color */
+    background-color: #1e77b2; /* Change this color to your desired primary color */
 }
 
 .text-secondary {
