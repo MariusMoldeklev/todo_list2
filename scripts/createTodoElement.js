@@ -1,12 +1,4 @@
 
-
-const template = `
-<div class="todo-item">
-  <p>Feed sharks</p>
-  <p>created at : <span class="created-at"></span></p>
-</div>
-`
-
 /**
  * Takes a Todo Item and generates a HTML Element for that Todo
  * You are free to make wathever HTLM you feel necessary,
@@ -16,8 +8,15 @@ const template = `
  * @param {Todo} data
  * @returns {HTMLElement}
  */
+
+const template = `
+<div class="todo-item">
+  <p class="title"></p>
+  <p>created at : <span class="created-at-value"></span></p>
+</div>
+`;
+
 export function createTodoElement(data) {
-    
     const wrapper = document.createElement("li");
     wrapper.innerHTML = template;
 

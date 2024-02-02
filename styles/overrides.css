@@ -11,3 +11,73 @@ body {
   todo-item >p:first-child{
 
   }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.bg-primary {
+    background-color: #3498db; /* Change this color to your desired primary color */
+}
+
+.text-secondary {
+    color: #ffffff; /* Change this color to your desired text color */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+/* Todo List Styles */
+.todo-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+    background-color: #fff;
+}
+
+#todoDisplay {
+    list-style-type: none;
+    padding: 0;
+}
+
+#todoTextInput {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+#addButton {
+    padding: 5px 10px;
+    background-color: #2ecc71; /* Change this color to your desired button color */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+#addButton:hover {
+    background-color: #27ae60; /* Change this color to your desired button hover color */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: auto;
+    padding: 10px;
+}

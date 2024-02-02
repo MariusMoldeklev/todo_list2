@@ -1,8 +1,13 @@
 /**
  * The file where everything comes together
  */
-import * as todoList from "./scripts/todoList.js";
+// import * as todoList from "./scripts/todoList.js";
+// import { createTodoElement } from "./scripts/createTodoElement.js";
+
+import { getAllTodoes } from "./scripts/todoList.js";
 import { createTodoElement } from "./scripts/createTodoElement.js";
+import * as todoList from "./scripts/todoList.js";
+
 
 // What elements do we need?
 // What events do we need to listen for?
@@ -16,22 +21,21 @@ const todoDisplay = document.querySelector("#todoDisplay");
 function updateDisplay() {
     todoDisplay.innerHTML = "";
 
-   for (const todo of todoes) {
-    
-    const newTodo = createTodoElement(todo);
+    // Use the getAllTodoes function to get the todoes array
+    const todoes = getAllTodoes();
 
-    todoDisplay.appendChild(newTodo);
-}
+    for (const todo of todoes) {
+        const newTodo = createTodoElement(todo);
+        todoDisplay.appendChild(newTodo);
+    }
 }
 
-addButton.addEventListener("click", () =>{
-    // need to read the user inputText
-    const userInput  = inputText.value;
-    // call our todolist.addtodo
-    const newTodoData =  {
+addButton.addEventListener("click", () => {
+    const userInput = inputText.value;
+    const newTodoData = {
         title: userInput,
     };
     todoList.addTodo(newTodoData);
-    // reset user input
     inputText.value = "";
-})
+    updateDisplay();
+});
