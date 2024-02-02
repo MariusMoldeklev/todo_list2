@@ -81,3 +81,8 @@ footer {
     margin-top: auto;
     padding: 10px;
 }
+
+.completed-task {
+  background-color: #f2f2f2; /* Change this color to your desired completed task background color */
+  text-decoration: line-through; /* Add a line-through to completed tasks */
+}

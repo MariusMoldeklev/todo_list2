@@ -18,7 +18,7 @@ const inputText = document.querySelector("#todoTextInput");
 const addButton = document.querySelector("#addButton");
 const todoDisplay = document.querySelector("#todoDisplay");
 
-function updateDisplay() {
+ function updateDisplay() {
     todoDisplay.innerHTML = "";
 
     // Use the getAllTodoes function to get the todoes array
@@ -26,6 +26,12 @@ function updateDisplay() {
 
     for (const todo of todoes) {
         const newTodo = createTodoElement(todo);
+
+        // Style completed tasks differently
+        if (todo.isComplete) {
+            newTodo.classList.add("completed-task");
+        }
+
         todoDisplay.appendChild(newTodo);
     }
 }
